@@ -3836,6 +3836,18 @@ Function UninstallHyperV {
 	}
 }
 
+# Install Windows Sandbox
+Function InstallWindowsSandbox {
+	Write-Output "Installing Windows Sandbox..."
+	Get-WindowsOptionalFeature -Online | Where-Object { $_.FeatureName -eq "Containers-DisposableClientVM" } | Enable-WindowsOptionalFeature -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+}
+
+# Uninstall Windows Sandbox
+Function UninstallWindowsSandbox {
+	Write-Output "Uninstalling Windows Sandbox..."
+	Get-WindowsOptionalFeature -Online | Where-Object { $_.FeatureName -eq "Containers-DisposableClientVM" } | Disable-WindowsOptionalFeature -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+}
+
 # Uninstall OpenSSH Client - Applicable since 1803
 Function UninstallSSHClient {
 	Write-Output "Uninstalling OpenSSH Client..."
