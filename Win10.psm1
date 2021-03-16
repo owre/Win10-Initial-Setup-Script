@@ -520,6 +520,20 @@ Function EnableDiagTrack {
 	Start-Service "DiagTrack" -WarningAction SilentlyContinue
 }
 
+# Stop and disable Diagnostics Hub Standard Collector Service
+Function DisableDiagHub {
+	Write-Output "Stopping and disabling Diagnostics Hub Standard Collector Service..."
+	Stop-Service "diagnosticshub.standardcollector.service" -WarningAction SilentlyContinue
+	Set-Service "diagnosticshub.standardcollector.service" -StartupType Disabled
+}
+
+# Enable and start Diagnostics Hub Standard Collector Service
+Function EnableDiagHub {
+	Write-Output "Enabling Diagnostics Hub Standard Collector Service..."
+	Set-Service "diagnosticshub.standardcollector.service" -StartupType Manual
+	Start-Service "diagnosticshub.standardcollector.service" -WarningAction SilentlyContinue
+}
+
 # Stop and disable Device Management Wireless Application Protocol (WAP) Push Service
 # Note: This service is needed for Microsoft Intune interoperability
 Function DisableWAPPush {
