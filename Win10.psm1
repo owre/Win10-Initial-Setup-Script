@@ -2832,6 +2832,18 @@ Function HideBuildNumberFromDesktop {
 	Set-ItemProperty -Path "HKCU:\Control Panel\Desktop" -Name "PaintDesktopVersion" -Type DWord -Value 0
 }
 
+# Show "God Mode" folder on desktop
+Function ShowGodModeOnDesktop {
+	Write-output "Showing God Mode folder on desktop..."
+	New-Item -Path "$([System.Environment]::GetFolderPath("Desktop"))\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}" -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
+}
+
+# Hide "God Mode" folder on desktop
+Function HideGodModeOnDesktop {
+	Write-output "Hiding God Mode folder on desktop..."
+	Remove-Item -Path "$([System.Environment]::GetFolderPath("Desktop"))\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}" -ErrorAction SilentlyContinue
+}
+
 # Hide Desktop icon from This PC - The icon remains in personal folders and open/save dialogs
 Function HideDesktopFromThisPC {
 	Write-Output "Hiding Desktop icon from This PC..."
