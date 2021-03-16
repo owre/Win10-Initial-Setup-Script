@@ -3836,6 +3836,18 @@ Function UninstallHyperV {
 	}
 }
 
+# Install Windows Containers
+Function InstallWindowsContainers {
+	Write-Output "Installing Windows Containers..."
+	Get-WindowsOptionalFeature -Online | Where-Object { $_.FeatureName -eq "Containers" } | Enable-WindowsOptionalFeature -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+}
+
+# Uninstall Windows Containers
+Function UninstallWindowsContainers {
+	Write-Output "Uninstalling Windows Containers..."
+	Get-WindowsOptionalFeature -Online | Where-Object { $_.FeatureName -eq "Containers" } | Disable-WindowsOptionalFeature -Online -NoRestart -WarningAction SilentlyContinue | Out-Null
+}
+
 # Install Windows Sandbox
 Function InstallWindowsSandbox {
 	Write-Output "Installing Windows Sandbox..."

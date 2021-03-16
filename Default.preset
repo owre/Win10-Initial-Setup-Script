@@ -235,6 +235,7 @@ DisableMediaSharing             # EnableMediaSharing
 # UninstallPowerShellISE        # InstallPowerShellISE
 # InstallLinuxSubsystem         # UninstallLinuxSubsystem
 # InstallHyperV                 # UninstallHyperV
+# InstallWindowsContainers      # UninstallWindowsContainers
 # InstallWindowsSandbox         # UninstallWindowsSandbox
 # UninstallSSHClient            # InstallSSHClient
 # InstallSSHServer              # UninstallSSHServer
