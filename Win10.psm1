@@ -65,6 +65,9 @@ Function DisableTelemetry {
 	
 	# .NET SDK
 	[System.Environment]::SetEnvironmentVariable('DOTNET_CLI_TELEMETRY_OPTOUT', '1', [System.EnvironmentVariableTarget]::Machine)
+
+	# Azure SQL Edge
+	[System.Environment]::SetEnvironmentVariable('MSSQL_TELEMETRY_ENABLED', 'FALSE', [System.EnvironmentVariableTarget]::Machine)
 }
 
 # Enable Telemetry
@@ -97,6 +100,9 @@ Function EnableTelemetry {
 
 	# .NET SDK
 	[System.Environment]::SetEnvironmentVariable('DOTNET_CLI_TELEMETRY_OPTOUT', $null, [System.EnvironmentVariableTarget]::Machine)
+
+	# Azure SQL Edge
+	[System.Environment]::SetEnvironmentVariable('MSSQL_TELEMETRY_ENABLED', $null, [System.EnvironmentVariableTarget]::Machine)
 }
 
 # Disable Cortana
