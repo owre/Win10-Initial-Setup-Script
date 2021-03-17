@@ -62,6 +62,9 @@ Function DisableTelemetry {
 	
 	# PowerShell 7
 	[System.Environment]::SetEnvironmentVariable('POWERSHELL_TELEMETRY_OPTOUT', '1', [System.EnvironmentVariableTarget]::Machine)
+	
+	# .NET SDK
+	[System.Environment]::SetEnvironmentVariable('DOTNET_CLI_TELEMETRY_OPTOUT', '1', [System.EnvironmentVariableTarget]::Machine)
 }
 
 # Enable Telemetry
@@ -91,6 +94,9 @@ Function EnableTelemetry {
 
 	# PowerShell 7
 	[System.Environment]::SetEnvironmentVariable('POWERSHELL_TELEMETRY_OPTOUT', $null, [System.EnvironmentVariableTarget]::Machine)
+
+	# .NET SDK
+	[System.Environment]::SetEnvironmentVariable('DOTNET_CLI_TELEMETRY_OPTOUT', $null, [System.EnvironmentVariableTarget]::Machine)
 }
 
 # Disable Cortana
