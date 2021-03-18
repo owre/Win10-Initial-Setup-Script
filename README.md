@@ -1,4 +1,4 @@
-This is the great work originally made and maintained by [Disassembler0](https://github.com/Disassembler0). Since the original [repo](https://github.com/Disassembler0/Win10-Initial-Setup-Script) has been archived - which I am a regular user of - I decided to clone it with the ambition of maintaining and improving it further.
+This is the great work originally created and maintained by [Disassembler0](https://github.com/Disassembler0). Since the original [repo](https://github.com/Disassembler0/Win10-Initial-Setup-Script) has been archived - which I am a regular user of - I decided to clone it with the ambition of maintaining and improving it further.
 
 &nbsp;
 
