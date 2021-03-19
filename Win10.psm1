@@ -2122,6 +2122,18 @@ Function HideBluetoothTrayIcon {
 	Set-Itemproperty 'HKCU:\Control Panel\Bluetooth' -Name 'Notification Area Icon' -Value '0' -Type DWord
 }
 
+# Show Meet Now tray icon
+Function ShowMeetNowTrayIcon {
+	Write-Output "Showing Meet Now tray icon..."
+	Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 0
+}
+
+# Hide Meet Now tray icon
+Function HideMeetNowTrayIcon {
+	Write-Output "Hiding Meet Now tray icon..."
+	Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 1
+}
+
 # Show seconds in taskbar
 Function ShowSecondsInTaskbar {
 	Write-Output "Showing seconds in taskbar..."

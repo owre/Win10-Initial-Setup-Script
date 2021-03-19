@@ -140,6 +140,7 @@ SetTaskbarCombineWhenFull       # SetTaskbarCombineNever        # SetTaskbarComb
 HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
 ShowTrayIcons                   # HideTrayIcons
 ShowBluetoothTrayIcon           # HideBluetoothTrayIcon
+# HideMeetNowTrayIcon           # ShowMeetNowTrayIcon
 # ShowSecondsInTaskbar          # HideSecondsFromTaskbar
 DisableSearchAppInStore         # EnableSearchAppInStore
 DisableNewAppPrompt             # EnableNewAppPrompt
