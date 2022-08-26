@@ -1,3 +1,9 @@
+# ⚠️ This repository is no longer maintained. 
+
+I have completely moved away from Windows with no intention to maintain this further. Curious to explore alternatives yourself? I can recommend [Linux Mint](https://linuxmint.com/) if you like a beginner friendly introduction to Linux 🐧️
+
+---
+
 This is the great work originally created and maintained by [Disassembler0](https://github.com/Disassembler0). Since the original [repo](https://github.com/Disassembler0/Win10-Initial-Setup-Script) has been archived - which I am a regular user of - I decided to clone it with the ambition of maintaining and improving it further.
 
 &nbsp;
